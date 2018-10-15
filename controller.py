@@ -3,6 +3,8 @@
 import model as m
 
 def game_loop():
+    win = 0
+    loss = 0
     while 1:
         user_choice = input("[R] Rock\n[P] Paper\n[S] Scissors\n")
         user_choice = user_choice.lower()
@@ -14,8 +16,6 @@ def game_loop():
                         + scissors  
         if user_choice in acceptable_input:
             computer_choice = m.computer_choice()
-            win = 0
-            loss =0
             if user_choice in rock:
                 print("r vs {}".format(computer_choice))
                 if user_choice == computer_choice:
