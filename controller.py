@@ -1,19 +1,23 @@
 #!/usr/bin/env python3 
 
 import model as m
+import view as v
 
 def game_loop():
     win = 0
     loss = 0
+    v.clear_screen()
     while 1:
-        user_choice = input("[R] Rock\n[P] Paper\n[S] Scissors\n")
+        user_choice = input("[R] Rock\n[P] Paper\n[S] Scissors\n[E] Exit\n")
         user_choice = user_choice.lower()
         rock = ['r', 'rock']
         paper = ['p', 'paper']
         scissors = ['s', 'scissors']
+        exit = ['e', 'exit']
         acceptable_input = rock     \
                         + paper     \
-                        + scissors  
+                        + scissors  \
+                        + exit
         if user_choice in acceptable_input:
             computer_choice = m.computer_choice()
             if user_choice in rock:
@@ -46,6 +50,9 @@ def game_loop():
                 else:
                     print("You win")
                     win +=1 
+            elif user_choice in exit:
+                v.clear_screen()
+                break
             else:
                 print("Error")
             print("You have won {} times and lost {} times".format(win, loss))
