@@ -7,6 +7,7 @@ def game_loop():
     win = 0
     loss = 0
     v.clear_screen()
+    v.welcome_menu()
     while 1:
         user_choice = input("[R] Rock\n[P] Paper\n[S] Scissors\n[E] Exit\n")
         user_choice = user_choice.lower()
