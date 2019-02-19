@@ -1,4 +1,5 @@
 # rock_paper_scissors
-this game allows the user to play rock, paper, scissors against the computer
-the computer's moves are randomly generated
-the code keeps track of points between the user and the computer
+This game allows the user to play rock, paper, scissors against the computer. The computer's moves are randomly generated as random integers are mapped to one of the three available choices. The game keeps track of points between the user and the computer. 
+
+### How to play
+Just follow the in-game prompts and have fun! 👊🏻🖐🏻✌🏻
